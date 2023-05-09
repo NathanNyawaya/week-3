@@ -1,0 +1,192 @@
+body {
+  font-family: HelveticaNow, Helvetica, sans-serif;
+}
+
+.App {
+  margin: 8px;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+img {
+  border-style: none;
+}
+
+.categories {
+  display: flex;
+}
+
+.categories--item {
+  background-color: #efeff0;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 2px;
+  padding: 12px;
+}
+/* to improve ux I have added the hover effect on the categories, and also made the selected category text to be white to increase contrast */
+.categories--item:hover {
+  background-color: #bdbdc1;
+}
+
+.categories--item-selected,
+.categories--item-selected:hover {
+  background-color:  #5d5d63;
+  color: whitesmoke;
+  font-size: medium;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+.products--item {
+  margin: 8px;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+.products--item {
+    width: calc(50% - 16px);
+}
+}
+
+@media (min-width: 1000px) {
+.products--item {
+    width: calc(33% - 16px);
+}
+}
+
+
+.product{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product--image {
+  margin-bottom: auto;
+  margin-top: auto;
+  max-height: 300px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.product--title {
+  overflow: hidden;
+  padding-top: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.loading--notification{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+.loading{
+  font-size: 1.5rem;
+  font: medium;
+}
+
+
+/* like badge */
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.product-card__image {
+  position: relative;
+  flex: 1;
+}
+
+.product-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.product-card__like-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.product-card__like-button img {
+  width: 24px;
+  height: 24px;
+  fill: #f44336;
+}
+
+.product-card__info {
+  padding: 16px;
+}
+
+.product-card__title {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+}
+
+.product-card__price {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-card__description {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+}
+
+
+/* navigation */
+nav {
+  background-color: #333333d4;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 3px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 1rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+.active-link {
+  text-decoration: underline;
+  font-weight: bold;
+}
